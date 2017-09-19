@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <% keywords = require('./src/common/keywords.ejs') %>
+  <%= keywords() %>
+  <title>Yo!Go货架 - YO!POINT</title>
+</head>
+
+<body>
+  <header class="body-header yogo-header">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <img src="/assets/images/banner_yogo.jpg" alt="">
+        <span class="banner-cover"></span>
+      </div>
+      <% nav = require('./src/common/nav.ejs') %>
+      <%= nav({index: 1}) %>
+      <article class="slogan-container">
+        <section class="slogan-wrapper">
+          <header><h2>Yo!Go! 办公室无人零食货架</h2></header>
+          <p>无人值守，自助扫码支付，智能盘点核算</p>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <article class="body-main">
+    <section class="main-block">
+      <article class="yogo-block">
+        <header>
+          <h2 class="block-title">投放模式</h2>
+        </header>
+        <ul class="block-wrapper clear mode-container">
+          <li>
+            <section>
+              <header><h3 class="mode-title">自营模式</h3></header>
+              <ul class="mode-content">
+                <li>1. 免费提供完整无人零售系统支持；</li>
+                <li>2. 自行采购货架与商品；</li>
+                <li>3. T+1 结算；</li>
+              </ul>
+            </section>
+            <a href="javascript:;" class='btn-apply'>申请</a>
+          </li>
+          <li>
+            <section>
+              <header><h3 class="mode-title">供应商模式</h3></header>
+              <ul class="mode-content">
+                <li>1. 采购Yo!Go!货架2套，免费提供完整无人零售系统支持；</li>
+                <li>2. 提供零食饮料批发，送货上门，商品摆货成列；</li>
+                <li>3. 实时到账，商品利润100%归公司所有。</li>
+                <li>4. 一次性采购5000元，赠送2套货架。目前仅限深圳市区。</li>
+              </ul>
+            </section>
+            <a href="javascript:;" class='btn-apply'>申请投放</a>
+          </li>
+          <li>
+            <section>
+              <header><h3 class="mode-title">联合经营模式</h3></header>
+              <ul class="mode-content">
+                <li>1. 免费投放Yo!Go!货架2套，免费提供完整无人零售系统支持；</li>
+                <li>2. 定期补充商品，送货上门，商品摆货成列；</li>
+                <li>3. 商品利润100%归我司所有；</li>
+                <li>4. 月度返佣10%（销售额）。目前仅限深圳市区。</li>
+              </ul>
+            </section>
+            <a href="javascript:;" class='btn-apply'>申请投放</a>
+          </li>
+        </ul>
+      </article>
+      <article class="yogo-block">
+        <header>
+          <h2 class="block-title">无人零售系统特色</h2>
+        </header>
+        <ul class="block-wrapper clear special-container">
+          <li>
+            <img class="special-bg" src="/assets/images/banner_yogo.jpg" alt="">
+            <span class="special-bg-cover"></span>
+          </li>
+          <li>
+            <span class="special-img"><i class="iconfont icon-scan"></i></span>
+            <p>支持微信/支付宝扫码购买</p>
+          </li>
+          <li>
+            <span class="special-img"><i class="iconfont icon-byself"></i></span>
+            <p>自主选购，三步完成</p>
+          </li>
+          <li>
+            <span class="special-img"><i class="iconfont icon-save"></i></span>
+            <p>进销存管理，智能盘点</p>
+          </li>
+        </ul>
+      </article>
+      <article class="yogo-block">
+        <header>
+          <h2 class="block-title">已入驻企业案例</h2>
+        </header>
+        <div class="example-container clear">
+          <nav class="example-nav" id="example-nav">
+            <ul>
+              <li class="active">360手机</li>
+              <li>时代华影</li>
+              <li>招商银行</li>
+            </ul>
+          </nav>
+          <div class="example-wrapper">
+            <ul>
+              <li class="active"><img src="/assets/images/banner_yogo.jpg" alt=""></li>
+              <li><img src="/assets/images/banner_index.jpeg" alt=""></li>
+              <li><img src="/assets/images/banner_vmax.jpg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+  </article>
+  <% footer = require('./src/common/footer.ejs') %>
+  <%= footer() %>
+
+  <script src="/assets/script/jquery.min.js"></script>
+</body>
+
+</html>

@@ -79,7 +79,7 @@ module.exports = {
       })
     }),
     new HtmlWebpackIncludeAssetsPlugin({
-      assets: ['common/common.css'],
+      assets: ['/at.alicdn.com/t/font_418040_t58rbuyglftakyb9.css', 'common/common.css'],
       append: false,
     }),
     new ExtractTextPlugin({

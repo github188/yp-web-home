@@ -8,7 +8,6 @@
   <% keywords = require('./src/common/keywords.ejs') %>
   <%= keywords() %>
   <title>Vmax大屏系列 - YO!POINT</title>
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_418040_144ju1viwpbsxlxr.css">
 </head>
 
 <body>
@@ -40,25 +39,17 @@
             <h4 class="steps-description">0首期，融资租赁方案，最高支持100万额度</h4>
           </header>
           <ul class="steps-wrapper clear">
-            <li>
-              <span class="step-num">1</span>
-              <p>支付宝扫码登录</p>
-            </li>
-            <li></li>
-            <li>
-              <span class="step-num">2</span>
-              <p>芝麻信用授权</p>
-            </li>
-            <li></li>
-            <li>
-              <span class="step-num">3</span>
-              <p>申请购买额度</p>
-            </li>
-            <li></li>
-            <li>
-              <span class="step-num">4</span>
-              <p>签约选购</p>
-            </li>
+            <% Steps = ['支付宝扫码登录', '', '芝麻信用授权', '', '申请购买额度', '', '签约选购'] %>
+            <% for (j in Steps) { %>
+              <% if (j % 2 === 0) { %>
+              <li>
+                <span class="step-num"><%= (+j / 2) + 1 %></span>
+                <p><%= Steps[j] %></p>
+              </li>
+              <% } else { %>
+              <li></li>
+              <% } %>
+            <% } %>
           </ul>
         </div>
         <a href="javascript:;" class="btn-handel">立即办理</a>
@@ -124,7 +115,6 @@
   <% footer = require('./src/common/footer.ejs') %>
   <%= footer() %>
 
-  <script src="/assets/script/jquery.min.js"></script>
 </body>
 
 </html>
