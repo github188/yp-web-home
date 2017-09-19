@@ -37,6 +37,7 @@ img {
 .body-header .banner-wrapper .banner img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .body-header .banner-wrapper .banner .banner-cover {
   position: absolute;

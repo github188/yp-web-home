@@ -60,28 +60,21 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 10:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 8:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(9);
-module.exports = __webpack_require__(10);
+__webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
 
-/***/ 9:
+/***/ 12:
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -93,6 +86,13 @@ $(document).ready(function () {
     $exampleImages.eq(index).addClass('active').siblings().removeClass('active');
   });
 });
+
+/***/ }),
+
+/***/ 13:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

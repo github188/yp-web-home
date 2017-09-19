@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <% keywords = require('./src/common/keywords.ejs') %>
+  <%= keywords() %>
+  <title>Yo!礼小程序 - YO!POINT</title>
+</head>
+
+<body>
+  <header class="body-header microapp-header">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <img src="/assets/images/banner_microapp.png" alt="">
+        <!-- <span class="banner-cover"></span> -->
+      </div>
+      <% nav = require('./src/common/nav.ejs') %>
+      <%= nav({index: 2}) %>
+      <article class="slogan-container">
+        <section class="slogan-wrapper">
+          <header><h2>全新社交送礼，年轻人的玩法</h2></header>
+          <p>小程序购买Yo!礼卡赠送给亲朋好友，支持全国超过3000台售货机领取</p>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <article class="body-main">
+    <section class="main-block">
+      <div class="code-container">
+        <p>微信扫一扫</p>
+        <img src="/assets/images/microapp.jpg" alt="">
+        <h6 class="code-title">Yo!礼微信小程序</h6>
+      </div>
+    </section>
+  </article>
+  <% footer = require('./src/common/footer.ejs') %>
+  <%= footer() %>
+
+</body>
+
+</html>
