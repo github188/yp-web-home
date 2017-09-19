@@ -1,0 +1,31 @@
+{
+  "name": "yp-web-home",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "publish": "node build.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "build": "^0.1.4",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "ejs-loader": "^0.3.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-include-assets-plugin": "^1.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "jquery": "^3.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "postcss-loader": "^2.0.6",
+    "shelljs": "^0.7.8",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
+  }
+}

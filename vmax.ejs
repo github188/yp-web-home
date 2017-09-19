@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <% keywords = require('./src/common/keywords.ejs') %>
+  <%= keywords() %>
+  <title>Vmax大屏系列 - YO!POINT</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_418040_144ju1viwpbsxlxr.css">
+</head>
+
+<body>
+  <header class="body-header">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <img src="/assets/images/banner_vmax.jpg" alt="">
+        <span class="banner-cover"></span>
+      </div>
+      <% nav = require('./src/common/nav.ejs') %>
+      <%= nav({index: 1}) %>
+      <article class="slogan-container">
+        <section class="slogan-wrapper">
+          <header><h2>VMAX 室内大屏系列</h2></header>
+          <p>智能主机支持一拖N组合方案，满足不同场景需求</p>
+          <p>支持饮料、零食、3C数码等综合产品销售</p>
+          <p>最高可支持162种商品，810商品容量</p>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <article class="body-main">
+    <section class="main-block">
+      <div class="contract-container clear">
+        <div class="steps-container">
+          <header>
+            <h2 class="steps-title">蚂蚁金服 - 支付宝合约机</h2>
+            <h4 class="steps-description">0首期，融资租赁方案，最高支持100万额度</h4>
+          </header>
+          <ul class="steps-wrapper clear">
+            <li>
+              <span class="step-num">1</span>
+              <p>支付宝扫码登录</p>
+            </li>
+            <li></li>
+            <li>
+              <span class="step-num">2</span>
+              <p>芝麻信用授权</p>
+            </li>
+            <li></li>
+            <li>
+              <span class="step-num">3</span>
+              <p>申请购买额度</p>
+            </li>
+            <li></li>
+            <li>
+              <span class="step-num">4</span>
+              <p>签约选购</p>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:;" class="btn-handel">立即办理</a>
+      </div>
+      <%
+        CabinetArr = [{
+          title: 'VMAX - A柜',
+          subTitle: '55寸LG触摸屏，制冷零售终端',
+          description: '54货道，270容量，可自由变更，整机发泡<br/>移动支付、温度检测、掉货检测、副柜扩展',
+          price: '15800',
+          phone: '联系电话：0755-83828222',
+        }, {
+          title: 'VMAX - B柜',
+          subTitle: '制冷副柜，饮料零售终端',
+          warning: '需搭配A柜主控使用',
+          description: '54货道，270容量，可自由变更，整机发泡<br/>移动支付、温度检测、掉货检测、LED照明',
+          price: '11800',
+          phone: '联系电话：0755-83828222',
+        }, {
+          title: 'VMAX - C柜',
+          subTitle: '零食、3C综合零售终端',
+          warning: '需搭配A柜主控使用',
+          description: '54货道，270容量，可自由变更<br/>移动支付、掉货检测、LED照明',
+          price: '10800',
+          phone: '联系电话：0755-83828222',
+        }, {
+          title: 'VMAX - D柜',
+          subTitle: '智能格子、快递双用柜',
+          warning: '需搭配A柜主控使用',
+          description: '15格，大件商品<br/>移动支付、LED照明、开放接口',
+          price: '1****',
+          phone: '即将上市',
+        }, {
+          title: 'VMAX - E柜',
+          subTitle: '共享柜',
+          description: '共享电源、共享雨伞专用柜体<br/>资源共享、战略合作',
+          price: '3980',
+          phone: '联系电话：0755-83828222',
+        }]
+      %>
+      <% for (i in CabinetArr) { %>
+        <% cabinet = CabinetArr[i] %>
+      <article class="cabinet-container">
+        <span class='cabinet-bg'><img src='/assets/images/cabinet_bg<%= (+i+1) %>.jpg' /></span>
+        <header class="cabinet-title">
+          <h3 class='title'><%= cabinet.title %></h3>
+          <h6 class='subtitle'><%= cabinet.subTitle %></h6>
+          <% if (cabinet.warning) { %>
+          <p class='warning'><%= '* ' + cabinet.warning %></p>
+          <% } %>
+        </header>
+        <div class="cabinet-info">
+          <p><%= cabinet.description %></p>
+        </div>
+        <div class="cabinet-price">
+          <p class='price'>¥ <%= cabinet.price %></p>
+          <p class='phone'><%= cabinet.phone %></p>
+        </div>
+      </article>
+      <% } %>
+    </section>
+  </article>
+  <% footer = require('./src/common/footer.ejs') %>
+  <%= footer() %>
+
+  <script src="/assets/script/jquery.min.js"></script>
+</body>
+
+</html>

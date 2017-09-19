@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <% keywords = require('./src/common/keywords.ejs') %>
+  <%= keywords() %>
+  <title>YO!POINT</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_418040_144ju1viwpbsxlxr.css">
+</head>
+
+<body>
+  <header class="body-header">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <img src="/assets/images/banner_index.jpeg" alt="">
+        <span class="banner-cover"></span>
+      </div>
+      <% nav = require('./src/common/nav.ejs') %>
+      <%= nav({index: 0}) %>
+      <article class="slogan-container">
+        <section class="slogan-wrapper">
+          <header><h2>专注无人零售，聚焦提升行业效率</h2></header>
+          <p>赋予零售新能力</p>
+          <p>有你、有我、友朋</p>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <article class="body-main">
+    <section class="main-block">
+      <header>
+        <h2 class="block-title">商业合作</h2>
+      </header>
+      <div class="block-cooperation">
+        <ul class="clear">
+          <li>
+            <section class="box">
+              <header>
+                <h3 class="box-title">运营商</h3>
+                <p class="box-description">高性价比设备、智慧运营平台助力千万运营商升级</p>
+              </header>
+              <ul class="box-content clear">
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-shouhuoji"></i></span>
+                  <p class="item-title">智能零售终端</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-pingtai"></i></span>
+                  <p class="item-title">智慧运营平台</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-rongzi"></i></span>
+                  <p class="item-title">融资租赁</p>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <section class="box">
+              <header>
+                <h3 class="box-title">生产制造商</h3>
+                <p class="box-description">友朋助力中小生产厂商提升研发能力及产品质量把控</p>
+              </header>
+              <ul class="box-content">
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-yanfa"></i></span>
+                  <p class="item-title">机型研发</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-yuzhuang"></i></span>
+                  <p class="item-title">系统预装</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-shengchan"></i></span>
+                  <p class="item-title">生产管理平台</p>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li>
+            <section class="box">
+              <header>
+                <h3 class="box-title">品牌供应链</h3>
+                <p class="box-description">无人智能零售终端助力品牌开辟零售新渠道</p>
+              </header>
+              <ul class="box-content">
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-yinliao"></i></span>
+                  <p class="item-title">饮料品牌</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-lingshi"></i></span>
+                  <p class="item-title">零食品牌</p>
+                </li>
+                <li>
+                  <span class="item-icon"><i class="iconfont icon-3c"></i></span>
+                  <p class="item-title">3C品牌</p>
+                </li>
+              </ul>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <header>
+        <h2 class="block-title">加盟城市服务商</h2>
+      </header>
+      <div class="block-join">
+        <img src="/assets/images/bg_steps.png" alt="" class="join-bg">
+        <ul class="clear">
+          <li>1、成为运营商</li>
+          <li>2、当地实地评估可行性</li>
+          <li>3、签约成为服务商</li>
+        </ul>
+      </div>
+      <header>
+        <h2 class="block-title">为什么选择我们</h2>
+      </header>
+      <div class="block-why">
+        <ul class="clear">
+          <li>
+            <img src="/assets/images/index_img1.jpeg" alt="" class="box-bg">
+            <section class="why-box">
+              <i class="iconfont icon-anzhuangshigong"></i>
+              <header><h3 class="box-title">硬件研发能力</h3></header>
+              <p>满足不同商业场景下</p>
+              <p>设备的能力与适应性</p>
+            </section>
+          </li>
+          <li>
+            <img src="/assets/images/index_img2.png" alt="" class="box-bg">
+            <section class="why-box">
+              <i class="iconfont icon-guoji"></i>
+              <header><h3 class="box-title">互联网产品思维</h3></header>
+              <p>始终以用户价值为依托</p>
+              <p>挖掘价值点用数据说话</p>
+            </section>
+          </li>
+          <li>
+            <img src="/assets/images/index_img3.png" alt="" class="box-bg">
+            <section class="why-box">
+              <i class="iconfont icon-baobiao"></i>
+              <header><h3 class="box-title">运营服务支撑</h3></header>
+              <p>点位商品补货运营指导</p>
+              <p>资源嫁接</p>
+            </section>
+          </li>
+          <li>
+            <img src="/assets/images/index_img4.png" alt="" class="box-bg">
+            <section class="why-box">
+              <i class="iconfont icon-caiwu"></i>
+              <header><h3 class="box-title">金融服务支持</h3></header>
+              <p>依托大数据与第三方金融公司</p>
+              <p>合作提供租赁、分期等业务</p>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+  <% footer = require('./src/common/footer.ejs') %>
+  <%= footer() %>
+
+  <script src="/assets/script/jquery.min.js"></script>
+</body>
+
+</html>

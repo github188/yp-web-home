@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+.clear::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* body-header */
+.body-header .banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+.body-header .banner-wrapper .banner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -960px;
+  width: 1920px;
+  height: 100%;
+}
+.body-header .banner-wrapper .banner img {
+  width: 100%;
+  height: 100%;
+}
+.body-header .banner-wrapper .banner .banner-cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #12295E;
+  opacity: 0.5;
+}
+.body-header .banner-wrapper .nav-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.body-header .banner-wrapper .nav-container::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  background-color: rgba(6, 16, 36, 0.2);
+}
+.body-header .banner-wrapper .nav-container:hover::before {
+  background-color: rgba(6, 16, 36, 0.75);
+}
+.body-header .banner-wrapper .nav-container .nav-wrapper {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 1280px;
+}
+.body-header .banner-wrapper .logo-container {
+  float: left;
+}
+.body-header .banner-wrapper .logo-container .logo {
+  margin: 10px 0;
+  width: 190px;
+}
+.body-header .banner-wrapper .logo-container .title {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+  line-height: 1;
+  font-weight: normal;
+  color: #fff;
+  font-size: 18px;
+}
+.body-header .banner-wrapper .nav-list {
+  float: right;
+}
+.body-header .banner-wrapper .nav-list > li {
+  float: left;
+  font-size: 16px;
+}
+.body-header .banner-wrapper .nav-list > li a {
+  display: block;
+  position: relative;
+  min-width: 100px;
+  padding: 0 18px;
+  white-space: nowrap;
+  color: #fff;
+}
+.body-header .banner-wrapper .nav-list > li a:hover {
+  color: #ffc629;
+}
+.body-header .banner-wrapper .nav-list > li a .icon-arrow-up {
+  display: none;
+}
+.body-header .banner-wrapper .nav-list > li > a {
+  line-height: 50px;
+}
+.body-header .banner-wrapper .nav-list > li .sub-nav {
+  display: none;
+  font-size: 14px;
+  background-color: rgba(6, 16, 36, 0.75);
+}
+.body-header .banner-wrapper .nav-list > li .sub-nav a {
+  padding: 15px 18px 0;
+}
+.body-header .banner-wrapper .nav-list > li .sub-nav li:last-of-type a {
+  padding-bottom: 15px;
+}
+.body-header .banner-wrapper .nav-list > li.active > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #ffc629;
+}
+.body-header .banner-wrapper .nav-list > li:first-of-type > a {
+  min-width: 50px;
+}
+.body-header .banner-wrapper .nav-list > li:hover > a .icon-arrow-down {
+  display: none;
+}
+.body-header .banner-wrapper .nav-list > li:hover > a .icon-arrow-up {
+  display: initial;
+}
+.body-header .banner-wrapper .nav-list > li:hover .sub-nav {
+  display: block;
+}
+.body-header .banner-wrapper .slogan-container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  width: 1280px;
+}
+.body-header .banner-wrapper .slogan-container .slogan-wrapper {
+  padding-top: 210px;
+  margin-left: 200px;
+  color: #fff;
+}
+.body-header .banner-wrapper .slogan-container .slogan-wrapper h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+.body-header .banner-wrapper .slogan-container .slogan-wrapper p {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.body-footer {
+  background-color: #333;
+  color: #ddd;
+  font-size: 14px;
+}
+.body-footer > ul {
+  margin: 0 auto;
+  width: 1280px;
+}
+.body-footer > ul > li {
+  float: left;
+  width: 320px;
+}
+.body-footer > ul > li .box {
+  padding: 110px 0 0 30px;
+}
+.body-footer > ul > li .box .title {
+  margin-bottom: 15px;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: normal;
+}
+.body-footer > ul > li .qrcode {
+  display: block;
+  margin: 50px auto;
+  width: 220px;
+}
+.body-footer .copyright {
+  padding: 0 0 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
