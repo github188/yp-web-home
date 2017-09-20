@@ -1,0 +1,91 @@
+@pageW: 1280px;
+@majorColor: #ffc629;
+
+
+.about-header {
+  .banner-wrapper {
+    .banner {
+      .banner-cover {
+        background-color: #000615;
+        opacity: 1;
+      }
+    }
+    .slogan-container {
+      .slogan-wrapper {
+        h2 p {
+          font-size: 40px;
+          text-shadow: 0 0 4px rgba(0, 0, 0, .15);
+          &:nth-child(2) {
+            padding-left: 150px;
+          }
+          &:nth-child(3) {
+            padding-left: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#particle {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.main-block {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: @pageW;
+  color: #666;
+
+  .block-title {
+    margin: 50px 0 30px;
+    padding-left: 10px;
+    border-left: 10px solid @majorColor;
+    color: #444;
+  }
+}
+
+.intro {
+  .logo {
+    float: left;
+    margin: 20px 20px 20px 40px;
+    width: 150px;
+  }
+  .intro-content {
+    float: left;
+    margin: 20px 0 0 30px;
+    width: 500px;
+    text-indent: 2em;
+  }
+  .intro-images {
+    float: right;
+    width: 450px;
+
+    li {
+      float: left;
+      margin: 5px;
+      width: 210px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.contact {
+  .phone {
+    margin-left: 20px;
+  }
+  .map {
+    margin: 30px 20px 0;
+    height: 600px;
+    background-color: #eee;
+  }
+}

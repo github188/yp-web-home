@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <% keywords = require('./src/common/keywords.ejs') %>
+  <%= keywords() %>
+  <title>关于友朋 - YO!POINT</title>
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+</head>
+
+<body>
+  <header class="body-header about-header">
+    <div class="banner-wrapper">
+      <div class="banner">
+        <!-- <img src="/assets/images/banner_about.jpg" alt=""> -->
+        <div id="particle"></div>
+        <span class="banner-cover"></span>
+      </div>
+      <% nav = require('./src/common/nav.ejs') %>
+      <%= nav({index: 3}) %>
+      <article class="slogan-container">
+        <section class="slogan-wrapper">
+          <header>
+            <h2>
+              <p>正直 创新</p>
+              <p>分享 合作</p>
+              <p>拥抱变化</p>
+            </h2>
+          </header>
+        </section>
+      </article>
+    </div>
+  </header>
+
+  <article class="body-main">
+    <section class="main-block">
+      <article>
+        <header><h2 class="block-title">关于我们</h2></header>
+        <div class="intro clear">
+          <img class="logo" src="/assets/images/logo_about.png" alt="">
+          <div class="intro-content">
+            <p>这里应是一大堆介绍。这里应是一大堆介绍这里应是一大堆介绍这里应是一大堆介绍这里应是</p>
+            <p>一大堆介绍这里应是一大堆介绍这里应是一大堆介绍这里应是一大堆介绍</p>
+          </div>
+          <ul class="intro-images clear">
+            <li><img src="/assets/images/index_img1.jpeg" alt=""></li>
+            <li><img src="/assets/images/index_img2.png" alt=""></li>
+            <li><img src="/assets/images/index_img3.png" alt=""></li>
+            <li><img src="/assets/images/index_img4.png" alt=""></li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <header><h2 class="block-title">联系我们</h2></header>
+        <div class="contact">
+          <p class="phone">联系电话：0755-83828222</p>
+          <p class="phone">联系地址：深圳市南山区南山智园C2栋22F</p>
+          <div class="map" id="map"></div>
+        </div>
+      </article>
+    </section>
+  </article>
+  <script src="/assets/script/jparticles.js"></script>
+  <script src="/assets/script/particle.js"></script>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=D5QTg8B7kGWDdp0oMp6KOjrO"></script>
+	<script src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+
+</body>
+
+</html>

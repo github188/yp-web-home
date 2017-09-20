@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack",
-    "publish": "node build.js"
+    "build": "node build.js min=false",
+    "build-min": "node build.js min=true"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -25,7 +25,9 @@
     "postcss-loader": "^2.0.6",
     "shelljs": "^0.7.8",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.6",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "^2.8.2",
+    "webpack-merge": "^4.1.0"
   }
 }

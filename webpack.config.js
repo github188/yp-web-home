@@ -2,27 +2,38 @@ require('shelljs/global');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const production = process.env.production === 'true' ? true : false;
 const extractCss = {
-    fallback: 'style-loader',
-    use: ['css-loader'],
+  fallback: 'style-loader',
+  use: [{loader: 'css-loader',
+    options: {
+      minimize: production,
+    }
+  }],
 }
 const extractLess = {
-    fallback: 'style-loader',
-    use: ['css-loader', 'less-loader', {
-      loader: 'postcss-loader',
-      options: {
-        plugins: (loader) => [
-          require('autoprefixer')(),
-        ]
-      }
-    }],
+  fallback: 'style-loader',
+  use: [{loader: 'css-loader',
+    options: {
+      minimize: production,
+    }
+  }, 'less-loader', {
+    loader: 'postcss-loader',
+    options: {
+      plugins: (loader) => [
+        require('autoprefixer')(),
+      ]
+    }
+  }],
 };
 
 const pages = ls('./src/');
 const entry = {};
+const plugins = [];
 pages.map(item => {
   if (item == 'common') {
     entry[item] = [`./src/${item}/${item}.less`];
@@ -30,6 +41,12 @@ pages.map(item => {
     entry[item] = [`./src/${item}/${item}.js`, `./src/${item}/${item}.less`];
   }
 })
+if (production) {
+  plugins.push(
+    new CleanWebpackPlugin(path.join(__dirname, 'dist/')),
+    new UglifyjsWebpackPlugin(),
+  );
+}
 
 module.exports = {
   entry,
@@ -67,6 +84,7 @@ module.exports = {
     }, ],
   },
   plugins: [
+    ...plugins,
     ...pages.filter(page => {
       if (page !== 'common') {
         return true;
@@ -85,7 +103,6 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name]/[name].css',
     }),
-    new CleanWebpackPlugin(path.join(__dirname, 'dist/')),
   ],
   devServer: {
     contentBase: './'

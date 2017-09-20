@@ -6,4 +6,7 @@ $(document).ready(function() {
     $(this).addClass('active').siblings().removeClass('active');
     $exampleImages.eq(index).addClass('active').siblings().removeClass('active');
   })
+  $('.btn-apply').on('click', function(e) {
+    window.scrollTo(0, $('body').height() - $(window).height());
+  })
 })
