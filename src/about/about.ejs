@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <% keywords = require('./src/common/keywords.ejs') %>
+  <% keywords = require('../common/keywords.ejs') %>
   <%= keywords() %>
   <title>关于友朋 - YO!POINT</title>
 	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
@@ -19,8 +19,8 @@
         <div id="particle"></div>
         <span class="banner-cover"></span>
       </div>
-      <% nav = require('./src/common/nav.ejs') %>
-      <%= nav({index: 3}) %>
+      <% nav = require('../common/nav.ejs') %>
+      <%= nav({index: 5}) %>
       <article class="slogan-container">
         <section class="slogan-wrapper">
           <header>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <% keywords = require('./src/common/keywords.ejs') %>
+  <% keywords = require('../common/keywords.ejs') %>
   <%= keywords() %>
   <title>Yo!Go货架 - YO!POINT</title>
 </head>
@@ -17,7 +17,7 @@
         <img src="/assets/images/banner_yogo.jpg" alt="">
         <span class="banner-cover"></span>
       </div>
-      <% nav = require('./src/common/nav.ejs') %>
+      <% nav = require('../common/nav.ejs') %>
       <%= nav({index: 1}) %>
       <article class="slogan-container">
         <section class="slogan-wrapper">
@@ -118,7 +118,7 @@
       </article>
     </section>
   </article>
-  <% footer = require('./src/common/footer.ejs') %>
+  <% footer = require('../common/footer.ejs') %>
   <%= footer() %>
 
   <script src="/assets/script/jquery.min.js"></script>

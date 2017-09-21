@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <% keywords = require('./src/common/keywords.ejs') %>
+  <% keywords = require('../common/keywords.ejs') %>
   <%= keywords() %>
   <title>YO!POINT</title>
 </head>
@@ -17,7 +17,7 @@
         <img src="/assets/images/banner_index.jpeg" alt="">
         <span class="banner-cover"></span>
       </div>
-      <% nav = require('./src/common/nav.ejs') %>
+      <% nav = require('../common/nav.ejs') %>
       <%= nav({index: 0}) %>
       <article class="slogan-container">
         <section class="slogan-wrapper">
@@ -160,7 +160,7 @@
       </div>
     </section>
   </article>
-  <% footer = require('./src/common/footer.ejs') %>
+  <% footer = require('../common/footer.ejs') %>
   <%= footer() %>
 
 </body>

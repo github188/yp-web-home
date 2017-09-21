@@ -91,7 +91,7 @@ module.exports = {
       }
     }).map(page => {
       return new HtmlWebpackPlugin({
-        template: `./${page}.ejs`,
+        template: `./src/${page}/${page}.ejs`,
         filename: `${page}.html`,
         chunks: [page],
       })
