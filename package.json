@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "node build.js min=false",
-    "build-min": "node build.js min=true"
+    "build": "node build.js min=true",
+    "build-normal": "node build.js min=false"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
