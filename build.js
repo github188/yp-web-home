@@ -7,7 +7,5 @@ delete webpackConfig.devServer;
 const compiler = webpack(webpackConfig);
 
 compiler.run(() => {
-  rm('-rf', path.join(__dirname, './build/*'));
-  cp('-rf', path.join(__dirname, './dist/*'), './build/');
-  cp('-rf', path.join(__dirname, './assets'), './build/');
+  cp('-rf', path.join(__dirname, './assets'), './dist/');
 })
